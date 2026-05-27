@@ -1,15 +1,10 @@
-## System Demonstration
-
-
-https://github.com/user-attachments/assets/a6d22e86-2f6c-4f1d-8631-b3e8de9ed841
-
-
-----
 # RTOS-based Temperature Monitoring System
 
 This project builds a multitasking temperature monitoring system using the STM32F405RGTx microcontroller and the FreeRTOS real-time operating system. The system integrates a user interface on a touch LCD screen, the CAN network communication standard, and power management mechanisms (Sleep/Wakeup).
 
 The project is implemented within the framework of the Embedded Systems Practice course – University of Science (VNU-HCM).
+
+----
 
 ## Feature Overview
 
@@ -18,6 +13,8 @@ The project is implemented within the framework of the Embedded Systems Practice
 - **CAN Bus Communication:** Handles the transmission/reception of temperature data frames (Standard ID: `0x123`) between two network nodes (CAN1 and CAN2).
 - **Multitasking Management:** Utilizes FreeRTOS to independently operate tasks: sensor data collection, UI updates, and peripheral event handling.
 - **Power Management:** Optimizes energy usage with Sleep mode (WFI), supporting wake-up via external interrupt (EXTI).
+
+----
 
 ## Hardware Requirements
 
@@ -36,6 +33,8 @@ The project is implemented within the framework of the Embedded Systems Practice
 | **CAN Bus 2** | `PB12`, `PB13` | CAN2_RX, CAN2_TX |
 | **Wakeup** | `PA0` | Hardware Push Button (External Interrupt EXTI) |
 
+----
+
 ## Software Architecture
 
 The system is designed based on FreeRTOS with 3 threads running in parallel, exchanging data via a Message Queue:
@@ -46,9 +45,21 @@ The system is designed based on FreeRTOS with 3 threads running in parallel, exc
    - **PLAY Event:** Packages the temperature payload, transmits it via CAN1, and checks the receive buffer of CAN2.
    - **PAUSE Event:** Suspends SysTick and HAL Tick, and calls the `WFI` (Wait For Interrupt) instruction to put the MCU into Sleep state.
 
+----
+
 ## Build & Flash Guide
 
 The project's peripherals are configured via STM32CubeMX and can be compiled using GNU Make or STM32CubeIDE.
+
+----
+
+## System Demonstration
+
+
+https://github.com/user-attachments/assets/a6d22e86-2f6c-4f1d-8631-b3e8de9ed841
+
+
+----
 
 ### 1. Build
 Requires the system to have `arm-none-eabi-gcc` and `make` installed. Run the following commands in the terminal:
