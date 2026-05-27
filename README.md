@@ -1,3 +1,10 @@
+## System Demonstration
+
+
+https://github.com/user-attachments/assets/a6d22e86-2f6c-4f1d-8631-b3e8de9ed841
+
+
+----
 # RTOS-based Temperature Monitoring System
 
 This project builds a multitasking temperature monitoring system using the STM32F405RGTx microcontroller and the FreeRTOS real-time operating system. The system integrates a user interface on a touch LCD screen, the CAN network communication standard, and power management mechanisms (Sleep/Wakeup).
