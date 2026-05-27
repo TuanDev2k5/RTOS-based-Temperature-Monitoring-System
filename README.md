@@ -48,3 +48,9 @@ Yêu cầu hệ thống đã cài đặt `arm-none-eabi-gcc` và `make`. Chạy 
 ```bash
 cd Debug
 make
+
+
+https://github.com/user-attachments/assets/c1a1550f-d619-479f-9652-d8b27d0184e3
+
+<img width="960" height="1280" alt="1" src="https://github.com/user-attachments/assets/473b0ce3-530b-45d3-9ebe-ca5ca87ac147" />
+
